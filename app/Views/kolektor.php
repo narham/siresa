@@ -44,13 +44,13 @@
                         <th>Status</th>
                         <th>Level</th>
                     </tr>
-                    <?php foreach ($user as $key) : ?>
+                    <?php foreach ($kolektor as $key) : ?>
                     <tr>
-                        <td><?= $key['id_user']; ?></td>
-                        <td><?= $key['nama']; ?></td>
-                        <td><?= $key['nama_kelurahan']; ?></td>
-                        <td><?= $key['email']; ?></td>
-                        <td><?php if ($key['status'] == 1) {
+                        <td><?= $key->id_user; ?></td>
+                        <td><?= $key->nama; ?></td>
+                        <td><?= $key->nama_kelurahan; ?></td>
+                        <td><?= $key->email; ?></td>
+                        <td><?php if ($key->status == 1) {
                                     echo '<span class="label label-success">Aktif</span>';
                                 } else {
                                     echo '<span class="label label-danger">Non Aktif</span>';
@@ -58,13 +58,13 @@
                                 } ?>
 
                         </td>
-                        <td><?php if ($key['level'] == 1) {
-                                    echo '<span class="label label-success">Admin</span>';
-                                } elseif ($key['level'] == 2) {
+                        <td><?php if ($key->level == 1) {
                                     echo '<span class="label label-success">Pendata</span>';
+                                } elseif ($key->level == 2) {
+                                    echo '<span class="label label-success">Kolektor</span>';
                                 } else {
 
-                                    echo '<span class="label label-warning">Kolektor</span>';
+                                    echo '<span class="label label-danger">Belum Terdaftar</span>';
                                 }
                                 ?></td>
                     </tr>

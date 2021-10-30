@@ -50,4 +50,34 @@ class UserModel extends Model
         $query = $builder->get();
         return $query->getResultArray();
     }
+
+    public function get_profle($id_user)
+    {
+        $db = db_connect();
+        $builder = $db->table('kelurahan');
+        $builder->select('*');
+        $builder->join('user', 'user.kelurahan_id = kelurahan.id_kelurahan');
+        $query = $builder->where('id_user', $id_user)->get();
+        return $query->getRow();
+    }
+
+    public function get_pendata()
+    {
+        $db = db_connect();
+        $builder = $db->table('kelurahan');
+        $builder->select('*');
+        $builder->join('user', 'user.kelurahan_id = kelurahan.id_kelurahan');
+        $query = $builder;
+        return $query;
+    }
+
+    public function get_kolektor()
+    {
+        $db = db_connect();
+        $builder = $db->table('kelurahan');
+        $builder->select('*');
+        $builder->join('user', 'user.kelurahan_id = kelurahan.id_kelurahan');
+        $query = $builder;
+        return $query;
+    }
 }

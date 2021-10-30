@@ -83,7 +83,7 @@
                     <select id="level" class="form-control" name="level">
                         <option>Pilih Level Akses</option>
                         <option value="2">Pendata</option>
-                        <option value="3">Pilih Kolektor</option>
+                        <option value="3">Kolektor</option>
                     </select>
                 </div>
                 <div class="form-group">

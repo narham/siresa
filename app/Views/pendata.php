@@ -44,7 +44,7 @@
                         <th>Status</th>
                         <th>Level</th>
                     </tr>
-                    <?php foreach ($user as $key) : ?>
+                    <?php foreach ($pendata as $key) : ?>
                     <tr>
                         <td><?= $key['id_user']; ?></td>
                         <td><?= $key['nama']; ?></td>
@@ -59,12 +59,12 @@
 
                         </td>
                         <td><?php if ($key['level'] == 1) {
-                                    echo '<span class="label label-success">Admin</span>';
-                                } elseif ($key['level'] == 2) {
                                     echo '<span class="label label-success">Pendata</span>';
+                                } elseif ($key['level'] == 2) {
+                                    echo '<span class="label label-success">Kolektor</span>';
                                 } else {
 
-                                    echo '<span class="label label-warning">Kolektor</span>';
+                                    echo '<span class="label label-danger">Belum Terdaftar</span>';
                                 }
                                 ?></td>
                     </tr>

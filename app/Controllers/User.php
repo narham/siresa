@@ -19,6 +19,8 @@ class User extends BaseController
     {
         //
         $data = [
+            'titel' => 'Ini Titel',
+            'judul' => 'Database User',
             'user' => $this->UserModel->get_all()
         ];
         return view('user', $data);
@@ -28,6 +30,8 @@ class User extends BaseController
     {
         // tampilkan Firm Tambah User
         $data = [
+            'titel' => 'ini titel',
+            'judul' => 'Tambah user',
             'kelurahan' => $this->KelurahanModel->findAll()
         ];
 
@@ -85,5 +89,17 @@ class User extends BaseController
             session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
             return redirect()->to(base_url('user/add'));
         }
+    }
+    public function profile($id_user = null)
+    {
+        $model = new UserModel();
+        $data = [
+            'titel' => 'Ini titel',
+            'judul' => 'Profile',
+
+            'user' => $model->get_profle($id_user)
+        ];
+        // dd($data);
+        return view('profile', $data);
     }
 }
