@@ -155,7 +155,7 @@ class Potensi extends BaseController
         return view('pot_ajukan', $data);
     }
 
-    public function proses_ajukan($id_potensi)
+    public function proses_ajukan($id_potensi = null)
     {
         # code...
     }
