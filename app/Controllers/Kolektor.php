@@ -13,7 +13,7 @@ class Kolektor extends BaseController
         //
         $data = [
             'titel' => 'ini Titel',
-            'judul' => 'Dashboard Kolektor'
+            'judul' => 'Database Wajib Retribusi'
         ];
         return view('kolektor_home', $data);
     }

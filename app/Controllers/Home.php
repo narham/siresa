@@ -6,6 +6,10 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('layout/blank');
+        $data = [
+            'titel' => 'ini titel',
+            'judul' => 'ini judul'
+        ];
+        return view('layout/blank', $data);
     }
 }

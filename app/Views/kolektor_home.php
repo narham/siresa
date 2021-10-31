@@ -63,8 +63,40 @@
         <!-- /.col -->
     </div>
     <!-- /.row -->
+</section>
+<section class="content">
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title"><?= $judul; ?></h3>
+        </div>
+
+        <div class="box-body">
+            <?php if (session()->getFlashdata('pesan')) {
+                echo '<div class="callout callout-success">';
+                echo session()->getFlashdata('pesan');
+                echo '</div>';
+            } ?>
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama</th>
+                        <th>Kelurahan</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Level</th>
+                    </tr>
 
 
+                </table>
+            </div>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            Footer
+        </div>
+        <!-- /.box-footer-->
+    </div>
 </section>
 
 <?= $this->endSection(); ?>

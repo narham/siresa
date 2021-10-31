@@ -63,12 +63,13 @@ class Auth extends BaseController
                 $verify_pass = password_verify($password, $pass);
                 if ($verify_pass) {
                     if ($data['level'] == 1) {
-                        # code...
+                        // Membuat Session
                         $ses_data = [
                             'id'       => $data['id_user'],
                             'nama'     => $data['nama'],
                             'email'    => $data['email'],
                             'level'    => $data['level'],
+                            'kelurahan'    => $data['kelurahan_id'],
                             'foto'    => $data['foto'],
                             'login'     => TRUE
                         ];
@@ -81,6 +82,7 @@ class Auth extends BaseController
                             'email'    => $data['email'],
                             'level'    => $data['level'],
                             'foto'    => $data['foto'],
+                            'kelurahan'    => $data['kelurahan_id'],
                             'login'     => TRUE
                         ];
                         $session->set($ses_data);
@@ -92,6 +94,7 @@ class Auth extends BaseController
                             'email'    => $data['email'],
                             'level'    => $data['level'],
                             'foto'    => $data['foto'],
+                            'kelurahan'    => $data['kelurahan_id'],
                             'login'     => TRUE
                         ];
                         $session->set($ses_data);

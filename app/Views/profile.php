@@ -28,21 +28,16 @@
 
                     <h3 class="profile-username text-center"><?= $user->nama; ?></h3>
 
-                    <p class="text-muted text-center">Software Engineer</p>
+                    <p class="text-muted text-center"><?php if ($user->level == 1) {
+                                                            echo "ADMIN";
+                                                        } elseif ($user->level == 2) {
+                                                            # code...
+                                                            echo "Pendata";
+                                                        } else {
+                                                            # code...
+                                                            echo "Kolektor";
+                                                        } ?></p>
 
-                    <ul class="list-group list-group-unbordered">
-                        <li class="list-group-item">
-                            <b>Followers</b> <a class="pull-right">1,322</a>
-                        </li>
-                        <li class="list-group-item">
-                            <b>Following</b> <a class="pull-right">543</a>
-                        </li>
-                        <li class="list-group-item">
-                            <b>Friends</b> <a class="pull-right">13,287</a>
-                        </li>
-                    </ul>
-
-                    <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -323,48 +318,46 @@
                     <!-- /.tab-pane -->
 
                     <div class="tab-pane" id="settings">
-                        <form class="form-horizontal">
+                        <form id="profile-update" name="profile-update" action="<?= base_url('user/setting'); ?>"
+                            class="form-horizontal" method="post" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label for="inputName" class="col-sm-2 control-label">Name</label>
-
+                                <label for="inputName" class="col-sm-2 control-label">Nama Lengkap</label>
+                                <input id="id_user" type="hidden" name="id_user" value="<?= $user->id_user; ?>">
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputName" placeholder="Name">
+                                    <input id="nama" name="nama" type="text" class="form-control" id="inputName"
+                                        placeholder="Name">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                    <input id="email" name="email" type="email" class="form-control" id="inputEmail"
+                                        placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputName" class="col-sm-2 control-label">Name</label>
+                                <label for="inputName" class="col-sm-2 control-label">Password</label>
 
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                                    <input id="password" name="password" type="text" class="form-control" id="inputName"
+                                        placeholder="Name">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+                                <label for="inputName" class="col-sm-2 control-label">File</label>
 
                                 <div class="col-sm-10">
-                                    <textarea class="form-control" id="inputExperience"
-                                        placeholder="Experience"></textarea>
+                                    <input id="foto" name="foto" type="file" class="form-control" id="inputName"
+                                        placeholder="Name">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
 
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                                            <input type="checkbox"> I agree to the <a href="">terms and conditions</a>
                                         </label>
                                     </div>
                                 </div>
@@ -374,7 +367,9 @@
                                     <button type="submit" class="btn btn-danger">Submit</button>
                                 </div>
                             </div>
+
                         </form>
+
                     </div>
                     <!-- /.tab-pane -->
                 </div>

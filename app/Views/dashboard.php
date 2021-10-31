@@ -10,8 +10,8 @@
                 <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">CPU Traffic</span>
-                    <span class="info-box-number">90<small>%</small></span>
+                    <span class="info-box-text">Jumlah Potensi</span>
+                    <span class="info-box-number"><?= $sum_pot; ?><small> Orang</small></span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -23,7 +23,7 @@
                 <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">Likes</span>
+                    <span class="info-box-text">Jumlah Kelurahan </span>
                     <span class="info-box-number">41,410</span>
                 </div>
                 <!-- /.info-box-content -->
@@ -40,7 +40,7 @@
                 <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">Sales</span>
+                    <span class="info-box-text">Penerimaan</span>
                     <span class="info-box-number">760</span>
                 </div>
                 <!-- /.info-box-content -->
@@ -53,7 +53,7 @@
                 <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text">New Members</span>
+                    <span class="info-box-text">Wajib Retribusi</span>
                     <span class="info-box-number">2,000</span>
                 </div>
                 <!-- /.info-box-content -->
@@ -68,7 +68,7 @@
         <div class="col-md-12">
             <div class="box">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Monthly Recap Report</h3>
+                    <h3 class="box-title">Trafik Pemasukan</h3>
 
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
@@ -106,11 +106,11 @@
                         <!-- /.col -->
                         <div class="col-md-4">
                             <p class="text-center">
-                                <strong>Goal Completion</strong>
+                                <strong>Target Capaian Kelurhan</strong>
                             </p>
 
                             <div class="progress-group">
-                                <span class="progress-text">Add Products to Cart</span>
+                                <span class="progress-text">Baru</span>
                                 <span class="progress-number"><b>160</b>/200</span>
 
                                 <div class="progress sm">
@@ -119,7 +119,53 @@
                             </div>
                             <!-- /.progress-group -->
                             <div class="progress-group">
-                                <span class="progress-text">Complete Purchase</span>
+                                <span class="progress-text">Baru</span>
+                                <span class="progress-number"><b>160</b>/200</span>
+
+                                <div class="progress sm">
+                                    <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- /.progress-group -->
+                            <div class="progress-group">
+                                <span class="progress-text">Baru</span>
+                                <span class="progress-number"><b>160</b>/200</span>
+
+                                <div class="progress sm">
+                                    <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- /.progress-group -->
+                            <div class="progress-group">
+                                <span class="progress-text">Baru</span>
+                                <span class="progress-number"><b>160</b>/200</span>
+
+                                <div class="progress sm">
+                                    <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- /.progress-group -->
+                            <div class="progress-group">
+                                <span class="progress-text">Baru</span>
+                                <span class="progress-number"><b>160</b>/200</span>
+
+                                <div class="progress sm">
+                                    <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- /.progress-group -->
+                            <!-- /.progress-group -->
+                            <div class="progress-group">
+                                <span class="progress-text">Baru</span>
+                                <span class="progress-number"><b>160</b>/200</span>
+
+                                <div class="progress sm">
+                                    <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- /.progress-group -->
+                            <div class="progress-group">
+                                <span class="progress-text">Sawerigading</span>
                                 <span class="progress-number"><b>310</b>/400</span>
 
                                 <div class="progress sm">
@@ -128,7 +174,7 @@
                             </div>
                             <!-- /.progress-group -->
                             <div class="progress-group">
-                                <span class="progress-text">Visit Premium Page</span>
+                                <span class="progress-text">Losari</span>
                                 <span class="progress-number"><b>480</b>/800</span>
 
                                 <div class="progress sm">
@@ -137,7 +183,7 @@
                             </div>
                             <!-- /.progress-group -->
                             <div class="progress-group">
-                                <span class="progress-text">Send Inquiries</span>
+                                <span class="progress-text">Maloku</span>
                                 <span class="progress-number"><b>250</b>/500</span>
 
                                 <div class="progress sm">

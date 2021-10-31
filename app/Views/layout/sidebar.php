@@ -47,7 +47,21 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?= base_url('user'); ?>">User</a></li>
+                    <?php if (session()->get('level') == 1) {
+                        // Fungsi ke Admin
+
+                        echo '<li><a href="/siresa/user"></i>User</a></li>';
+                        echo '<li><a href="/siresa/potensi"></i>Potensi</a></li>';
+                        echo '<li><a href="/siresa/penerimaan"></i>Penerimaan</a></li>';
+                    } elseif (session()->get('level') == 2) {
+                        // Fungsi ke Pendata
+
+                        echo '<li><a href="/siresa/potensi/pot_by_kel"></i>Potensi</a></li>';
+                    } else {
+                        // Fungsi ke Kolektor
+                        echo '<li><a href="/siresa/potensi/pot_by_kel"></i>Potensi</a></li>';
+                    } ?>
+
 
                 </ul>
             </li>
